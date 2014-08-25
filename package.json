@@ -1,0 +1,19 @@
+{
+  "name": "slides-cli",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobinThrift/Slides-CLI.git"
+  },
+  "author": "Robin Thrift <thrift.d.robin@googlemail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobinThrift/Slides-CLI/issues"
+  },
+  "homepage": "https://github.com/RobinThrift/Slides-CLI"
+}
