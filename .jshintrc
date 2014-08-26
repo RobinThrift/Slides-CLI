@@ -1,0 +1,15 @@
+{
+    "camelcase": true,
+    "curly": true,
+    "indent": 4,
+    "latedef": true,
+    "newcap": true,
+    "noempty": true,
+    "quotmark": true,
+    "undef": true,
+    "unused": true,
+    "maxlen": 90,
+    "debug": true,
+    "mocha": true,
+    "node": true
+}
