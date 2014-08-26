@@ -15,11 +15,12 @@
   "bugs": {
     "url": "https://github.com/RobinThrift/Slides-CLI/issues"
   },
-  "homepage": "https://github.com/RobinThrift/Slides-CLI"
   "homepage": "https://github.com/RobinThrift/Slides-CLI",
   "devDependencies": {
     "gulp": "^3.8.7",
     "gulp-jshint": "^1.8.4",
     "jshint-stylish": "^0.4.0",
+    "mocha": "^1.21.4",
+    "should": "^4.0.4"
   },
 }
