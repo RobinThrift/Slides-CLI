@@ -23,6 +23,8 @@
     "mocha": "^1.21.4",
     "should": "^4.0.4"
   },
+  "dependencies": {
     "event-stream": "^3.1.7",
     "js-yaml": "^3.2.1",
+  }
 }
