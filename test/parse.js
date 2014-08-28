@@ -15,8 +15,10 @@ describe('Basics', function() {
     it('split simple slides', function() {
         var out = parse.split(fs.readFileSync('test/fixtures/split_test.md', {encoding: 'utf8'}));
         out.should.be.eql([
+            '',
             '# Slide Name',
-            '# Slide 2'
+            '{\n    classes:\n        - big-img\n}\n# Slide 2',
+            '# Slide 3'
         ]);
     });
 
