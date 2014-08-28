@@ -12,6 +12,11 @@ describe('Basics', function() {
         parsed.should.be.eql({classes: [ 'test' ], bgImg: 'test.png'});
     });
 
+    it('strip meta information', function() {
+        var parsed = parse.stripMeta(fs.readFileSync('test/fixtures/meta_test.md', 'utf8'));
+        parsed.should.be.eql('');
+    });
+
     it('split slides', function() {
         var out = parse.split(fs.readFileSync('test/fixtures/split_test.md', {encoding: 'utf8'}));
         out.should.be.eql([
