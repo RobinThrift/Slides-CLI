@@ -1,4 +1,5 @@
---[
-name: Slides Name
-author: Slides Author
-]--
+-- {
+    classes:
+        - test
+    bgImg: test.png
+}

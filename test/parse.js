@@ -8,8 +8,8 @@ describe('Basics', function() {
 
 
     it('should extract meta information', function() {
-        var parsed = parse.extractMeta(fs.readFileSync('test/fixtures/meta_test.md', {encoding: 'utf8'}));
-        parsed.should.be.eql({ name: 'Slides Name', author: 'Slides Author' });
+        var parsed = parse.extractMeta(fs.readFileSync('test/fixtures/meta_test.md', 'utf8'));
+        parsed.should.be.eql({classes: [ 'test' ], bgImg: 'test.png'});
     });
 
     it('split simple slides', function() {
