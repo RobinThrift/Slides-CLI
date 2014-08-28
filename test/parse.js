@@ -27,34 +27,15 @@ describe('Basics', function() {
         ]);
     });
 
-    it('creates vinyl file stream from slides', function(done) {
-        var stream = parse.toStream(fs.readFileSync('test/fixtures/stream_test.md', {encoding: 'utf8'})),
-            es     = require('event-stream'),
-            i      = 0,
-            objs   = [
-                {
-                    contents: '# Slide Name',
-                    meta: { bgImg: 'test.png' }
-                },
-                {
-                    contents: '# Slide 2',
-                    meta: { transition: 'slide' }
-                }
-            ],
-            test   = es.map(function(data, cb) {
-                if (i < 2) {
-                    var fixture = objs[i];
-                    data.contents.toString().should.be.eql(fixture.contents);
-                    data.meta.should.be.eql(fixture.meta);
-                    i++;
-                } 
-                cb(null, data);
-            });
-       
-        stream.pipe(test);
-
-        stream.on('end', function() {
-            done();
+    it('split slides an fill with content & metadata', function() {
+        var slides = parse.exec(fs.readFileSync('test/fixtures/exec_test.md', 'utf8'));
+        slides.should.be.eql({
+            meta: {title: 'Test', author: 'Robin Thrift', twitter: 'RobinThrift'},
+            slides: [
+                {meta: { classes: [ 'big-img' ], transition: 'slide' },
+                    content: '# Slide Name\n\n- these\n- are\n- bullet\n- points'},
+                {meta: {}, content: '-- # Slide 2'}
+            ]
         });
     });
 });
