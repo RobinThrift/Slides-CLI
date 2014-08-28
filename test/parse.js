@@ -12,7 +12,7 @@ describe('Basics', function() {
         parsed.should.be.eql({classes: [ 'test' ], bgImg: 'test.png'});
     });
 
-    it('split simple slides', function() {
+    it('split slides', function() {
         var out = parse.split(fs.readFileSync('test/fixtures/split_test.md', {encoding: 'utf8'}));
         out.should.be.eql([
             '',
