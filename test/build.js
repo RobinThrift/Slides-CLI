@@ -31,6 +31,5 @@ describe('Building', function() {
         config.title.should.be.eql('Test');
         config.author.should.be.eql('The Author');
         config.twitter.should.be.eql('TestAccount');
-
     });
 });
