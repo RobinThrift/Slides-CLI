@@ -67,4 +67,20 @@ describe('Building', function() {
 
         html.should.be.eql(fixture);
     });
+
+    it('wrap the slides in html', function() {
+        var html = build._wrapHTML({
+                    title: 'Default',
+                    theme: {
+                        templates: path.resolve(__dirname + '/../includes/templates')
+                    }            
+                }, [
+                    '<section><h1>Test</h1></section>'
+                ]),
+            fixture = fs.readFileSync(
+                    path.resolve(__dirname + '/fixtures/build/wrap.html'),
+                    'utf8'
+                );
+        html.should.be.eql(html);
+    });
 });
