@@ -54,4 +54,17 @@ describe('Building', function() {
 
         html.should.be.eql(fixture);
     });
+
+    it('render the markdown', function() {
+        var html = build._renderMarkdown({}, {
+                    meta: {},
+                    content: '# Test\n - this\n - is\n - a\n - test'
+                }),
+            fixture = fs.readFileSync(
+                    path.resolve(__dirname + '/fixtures/build/markdown.html'),
+                    'utf8'
+                );
+
+        html.should.be.eql(fixture);
+    });
 });
