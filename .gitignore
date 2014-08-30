@@ -6,3 +6,8 @@ node_modules
 
 # VIM
 *.session
+
+
+###################
+# Project
+includes/styles/_reveal.*

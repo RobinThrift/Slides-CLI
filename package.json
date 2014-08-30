@@ -25,5 +25,10 @@
   },
   "dependencies": {
     "js-yaml": "^3.2.1",
+    "node-bourbon": "^1.2.3",
+    "node-sass": "^0.9.3",
+    "q": "^1.0.1",
+    "q-io": "^1.11.4",
+    "reveal.js": "^2.6.2"
   }
 }
