@@ -20,4 +20,17 @@ describe('Building', function() {
             console.log(err);
         });    
     });
+
+    it('get config from input file', function() {
+        var file   = fs.readFileSync(
+                        path.resolve(__dirname + '/fixtures/build/config_test.md'), 
+                        'utf8'
+                     ),
+            config = build._getConfig({contents: file});
+
+        config.title.should.be.eql('Test');
+        config.author.should.be.eql('The Author');
+        config.twitter.should.be.eql('TestAccount');
+
+    });
 });
