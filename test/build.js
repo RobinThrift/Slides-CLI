@@ -32,4 +32,26 @@ describe('Building', function() {
         config.author.should.be.eql('The Author');
         config.twitter.should.be.eql('TestAccount');
     });
+
+    it('build a slide', function() {
+        var html = build._buildSlide({
+                theme: {
+                    templates: path.resolve(__dirname + '/../includes/templates')
+                }            
+            })({}, {
+                meta: {
+                    transition: 'slide',
+                    background: {
+                        img: '#ffffff'
+                    }
+                },
+                content: '# Test'
+            }),
+            fixture = fs.readFileSync(
+                    path.resolve(__dirname + '/fixtures/build/slide_build_test.html'),
+                    'utf8'
+            );
+
+        html.should.be.eql(fixture);
+    });
 });

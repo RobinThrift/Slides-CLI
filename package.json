@@ -24,6 +24,7 @@
     "should": "^4.0.4"
   },
   "dependencies": {
+    "handlebars": "^2.0.0-alpha.4",
     "js-yaml": "^3.2.1",
     "merge-defaults": "^0.2.1",
     "node-bourbon": "^1.2.3",

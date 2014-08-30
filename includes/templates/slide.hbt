@@ -1,0 +1,9 @@
+<section
+    class="slide {{#each meta.classes}} {{this}} {{/each}}"
+    {{#if meta.background.img}} data-background="{{meta.background.img}}" {{/if}}
+    {{#if meta.background.transition}} data-background-transition="{{meta.background.transition}}" {{/if}}
+    {{#if meta.background.size}} data-background-size="{{meta.background.size}}" {{/if}}
+    {{#if meta.transition}} data-transition="{{meta.transition}}" {{/if}}
+>
+    {{{ content }}}
+</section>
