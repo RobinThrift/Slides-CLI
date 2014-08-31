@@ -38,7 +38,7 @@ describe('Basics', function() {
         slides.should.be.eql([
             {meta: { classes: [ 'big-img' ], transition: 'slide' },
                 content: '# Slide Name\n\n- these\n- are\n- bullet\n- points'},
-            {meta: {}, content: '-- # Slide 2'}
+            {meta: {}, content: '# Slide 2'}
         ]);
     });
 });
