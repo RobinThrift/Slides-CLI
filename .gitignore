@@ -11,3 +11,5 @@ node_modules
 ###################
 # Project
 includes/styles/_reveal.*
+includes/styles/_pdf.*
+includes/scripts/*
