@@ -26,7 +26,7 @@ describe('Building', function() {
                         path.resolve(__dirname + '/fixtures/build/config_test.md'), 
                         'utf8'
                      ),
-            config = build._getConfig({contents: file});
+            config = build._getConfig({contents: file, cwd: ''});
 
         config.title.should.be.eql('Test');
         config.author.should.be.eql('The Author');
