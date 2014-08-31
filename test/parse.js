@@ -28,14 +28,17 @@ describe('Basics', function() {
     });
 
     it('split slides an fill with content & metadata', function() {
-        var slides = parse.exec(fs.readFileSync('test/fixtures/exec_test.md', 'utf8'));
-        slides.should.be.eql({
-            meta: {title: 'Test', author: 'Robin Thrift', twitter: 'RobinThrift'},
-            slides: [
-                {meta: { classes: [ 'big-img' ], transition: 'slide' },
-                    content: '# Slide Name\n\n- these\n- are\n- bullet\n- points'},
-                {meta: {}, content: '-- # Slide 2'}
-            ]
-        });
+        var slides = parse.getConfig(fs.readFileSync('test/fixtures/exec_test.md', 'utf8'));
+        slides.should.be.eql({title: 'Test', author: 'Robin Thrift', twitter: 'RobinThrift'});
+    });
+
+    it('should get the slides', function() {
+
+        var slides = parse.getSlides(fs.readFileSync('test/fixtures/exec_test.md', 'utf8'));
+        slides.should.be.eql([
+            {meta: { classes: [ 'big-img' ], transition: 'slide' },
+                content: '# Slide Name\n\n- these\n- are\n- bullet\n- points'},
+            {meta: {}, content: '-- # Slide 2'}
+        ]);
     });
 });
