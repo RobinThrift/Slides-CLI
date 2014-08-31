@@ -1,6 +1,8 @@
 title: Test
 author: The Author
 twitter: TestAccount
+theme:
+    css: './style.scss'
 
 -- {
     classes: 

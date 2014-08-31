@@ -86,4 +86,32 @@ describe('Building', function() {
                 );
         html.should.be.eql(fixture);
     });
+
+});
+
+
+describe('Full Build', function() {
+   it('do a simple build', function(done) {
+        var baseFile = {
+            cwd: path.resolve(__dirname + '/fixtures/build/full/input'),
+            path: path.resolve(__dirname + '/fixtures/build/full/input/src/slides.md'),
+            contents: fs.readFileSync(
+                            path.resolve(__dirname +
+                                         '/fixtures/build/full/input/src/slides.md'),
+                            'utf8')
+        };
+
+        build.run(baseFile).then(function() {
+            var exists = fs.existsSync,
+                base   = path.resolve(__dirname + '/fixtures/build/full/input/build');
+
+            exists(base + '/index.html').should.be.eql(true);
+            exists(base + '/styles/main.css').should.be.eql(true);
+            exists(base + '/scripts/reveal.min.js').should.be.eql(true);
+
+            done();
+        }, function(err) {
+            console.log(err);
+        });
+   });
 });
