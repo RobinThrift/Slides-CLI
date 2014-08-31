@@ -14,11 +14,14 @@ describe('Building', function() {
                 baseCss: path.resolve(__dirname + '/../includes/styles')
             }
         }).then(function(css) {
-            css.should.be.eql('body{background:\'red\';}');
+            css.should.be.eql(fs.readFileSync(
+                                path.resolve(__dirname + '/fixtures/scss/output.css'),
+                                'utf8'
+                            ));
             done();
         }, function(err) {
             console.log(err);
-        });    
+        });
     });
 
     it('get config from input file', function() {
