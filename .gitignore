@@ -13,3 +13,4 @@ node_modules
 includes/styles/_reveal.*
 includes/styles/_pdf.*
 includes/scripts/*
+test/fixtures/build/full/input/build
