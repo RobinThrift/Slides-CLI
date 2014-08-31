@@ -81,6 +81,6 @@ describe('Building', function() {
                     path.resolve(__dirname + '/fixtures/build/wrap.html'),
                     'utf8'
                 );
-        html.should.be.eql(html);
+        html.should.be.eql(fixture);
     });
 });
