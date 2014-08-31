@@ -12,5 +12,6 @@ node_modules
 # Project
 includes/styles/_reveal.*
 includes/styles/_pdf.*
+includes/styles/default.*
 includes/scripts/*
 test/fixtures/build/full/input/build
