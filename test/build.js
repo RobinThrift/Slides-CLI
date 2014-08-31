@@ -38,7 +38,7 @@ describe('Building', function() {
                 theme: {
                     templates: path.resolve(__dirname + '/../includes/templates')
                 }            
-            })({}, {
+            })({
                 meta: {
                     transition: 'slide',
                     background: {
