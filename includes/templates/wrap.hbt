@@ -18,16 +18,7 @@
 
     <script src="scripts/reveal.min.js"></script>
     <script>
-        Reveal.initialize({              
-            controls: true,              
-            progress: true,              
-            slideNumber: true,           
-            history: true,               
-            keyboard: true,              
-            overview: true,              
-            transition: 'linear',        
-            backgroundTransition: 'slide'
-        });                              
+        Reveal.initialize({{{json config.reveal}}});                              
     </script>
 </body>
 </html>
