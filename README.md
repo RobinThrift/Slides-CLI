@@ -63,6 +63,7 @@ within the `{}`s. For the most part these options are passed directly to reveal.
 ### Presentation Options
 The only options that are used internally are:
 - `reveal`: object that will be passed directly to [`Reveal.initialize`](https://github.com/hakimel/reveal.js/#configuration)
+- `marked`: this options object will be passed to the [marked](https://github.com/chjj/marked) markdown compiler
 - `theme`: controlls the css and templates paths
     - `css`: the path to the scss file you want to render
     - `templates`: path to a `wrap.hbt` and a `slide.hbt` template
